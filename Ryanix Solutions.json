@@ -1,0 +1,306 @@
+{
+  "name": "Ryanix Solutions",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -864,
+        -352
+      ],
+      "id": "3aa44de1-a7ef-498b-a987-d250174fe581",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=\"The current machine telemetry shows: Machine ID: ACME-01, Temperature: 92°C, Status: Critical.\nTask 1: Gmail Alert\nSend a formal, professional email to the manager. Use a proper salutation, skip lines between paragraphs, and ensure correct punctuation. Include a section titled 'Immediate Actions Required' listing 5 short, precise bulleted steps (e.g., emergency stop, cooling, isolation).\nTask 2: Google Calendar\nSchedule a repair immediately:\nTitle: URGENT: Emergency Repair - Machine ACME-01\nDescription: Critical temperature alert (92°C) detected. Maintenance required to prevent system failure.\nLocation: Grünerløkka, Oslo, Norway 🇳🇴\nTask 3: Telegram Alert\nSend a short, urgent push notification via Telegram: '🚨 CRITICAL ALERT: Machine ACME-01 is at 92°C. Emergency repair scheduled. Check email for action steps.'\nTask 4: PagerDuty Incident\nCreate a high-priority incident in PagerDuty:\nTitle: [CRITICAL] ACME-01 Overheat (92°C)\nDescription: Industrial telemetry indicates a critical temperature threshold has been exceeded.\nUrgency: High\nTask 5: Discord Alert\nUse the Discord tool to send a message to the team channel. Format the message clearly:\n🚨 CRITICAL SYSTEM ALERT\nDevice: Machine ACME-01\nCondition: 92°C (Critical)\nStatus: Emergency repair scheduled in Google Calendar. PagerDuty incident triggered.\"",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -432,
+        -464
+      ],
+      "id": "6d2ec144-7ad7-481b-be3a-bf981a1cba33",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        -656,
+        -240
+      ],
+      "id": "ae099be2-c8db-444f-aa29-ba44a2e819ff",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "IiaC3QbFugGCkmhd",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "manual-test-id"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -544,
+        32
+      ],
+      "id": "d9a8a1f0-487d-4804-bd29-2ec4735e0fc5",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "\"Use this tool to schedule repair windows and technician visits.\"",
+        "calendar": {
+          "__rl": true,
+          "value": "wisemansirirog@gmail.com",
+          "mode": "list",
+          "cachedResultName": "wisemansirirog@gmail.com"
+        },
+        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+        "additionalFields": {
+          "location": " \"Grünerløkka, Oslo, Norway\"",
+          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        320,
+        -192
+      ],
+      "id": "eece891f-5a3b-4136-9cee-002034c086f5",
+      "name": "Create an event in Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "w7vvhHVOojURicGw",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "wisemansirirog@gmail.com",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
+        "emailType": "text",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.2,
+      "position": [
+        -128,
+        -96
+      ],
+      "id": "8f0a1c26-4f39-46a1-b6ab-2970b91146d1",
+      "name": "Send a message in Gmail",
+      "webhookId": "3e1784eb-ca43-4d2e-9c0a-0989ce796b14",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "DfoyNzson1EgZRl6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "891332582",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Text', ``, 'string') }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTool",
+      "typeVersion": 1.2,
+      "position": [
+        480,
+        -320
+      ],
+      "id": "313e637f-c728-47c0-af90-cf5b92b55554",
+      "name": "Send a text message in Telegram",
+      "webhookId": "ad7f0e02-e208-4ab0-a865-93302b8e23bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "TQZs6yof8MtT5rSC",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "descriptionType": "auto",
+        "authentication": "oAuth2",
+        "resource": "incident",
+        "operation": "create",
+        "title": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Title', ``, 'string') }}",
+        "serviceId": "=PES7JMH",
+        "email": "s333263@studenti.polito.it",
+        "additionalFields": {},
+        "conferenceBridgeUi": {}
+      },
+      "type": "n8n-nodes-base.pagerDutyTool",
+      "typeVersion": 1,
+      "position": [
+        112,
+        -128
+      ],
+      "id": "130f3363-f75d-477f-8d71-902a2c791da2",
+      "name": "Create an incident in PagerDuty",
+      "credentials": {
+        "pagerDutyOAuth2Api": {
+          "id": "Eh7t27USgHgsumWd",
+          "name": "PagerDuty account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discordTool",
+      "typeVersion": 2,
+      "position": [
+        -352,
+        -64
+      ],
+      "id": "f0102cf8-db8b-4b02-89d8-42fdb5157610",
+      "name": "Discord",
+      "webhookId": "7d05e4b7-8946-4f98-8b5b-61fd6a1346b4",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "2Rlm0AtBpOS3kgQI",
+          "name": "Discord Bot account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an event in Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message in Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message in Telegram": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an incident in PagerDuty": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discord": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "18d85458-7cfc-4a79-89a2-99f592ab3170",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8f233f6d3f6646e9e5bcef9b0efe468af479641e9d14673859b138eb0d87c75b"
+  },
+  "id": "GHlOyoLN_2kAUMPLfO5_j",
+  "tags": []
+}
