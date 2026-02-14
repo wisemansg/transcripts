@@ -3,312 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiseman Siriro | Engineering & Data Analysis Portfolio</title>
     
-    <!--💡UPDATE: Change the title to your name-->
-    <title>Wiseman Siriro | Data Analysis Portfolio</title>
-      
-    <!--💡UPDATE: Add your favicon here. You can generate one at realfavicongenerator.net-->
-    <link rel="icon" type="image/png" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="favicon-32x32.png">
     
-    <!-- Google Fonts for Elegant Typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- Your Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .social-links a {
+            color: inherit;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.25);
+            color: #0a66c2; /* LinkedIn-ish blue – change to your theme */
+        }
+        .education {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+        .education p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .word-table td {
+            border: 1px solid #ccc;
+            padding: 12px 16px;
+            vertical-align: top;
+        }
+        .word-table .col-heading {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 260px;
+            background: #f8f9fa;
+        }
+    </style>
 </head>
 <body>
 
-<!-- HEADER SECTION -->
 <header>
     <div class="container">
-        <!--💡UPDATE: Change to your name and title-->
-        <h1>Ryan</h1>
-        <p>Mechanical Engineer | Materials Engineer | Manufacturing Engineer | Process Engineer | Research and Development (R&D) Engineer | Sustainability Analyst | Data Analyst 
-            ( European Erasmus Mundus Joint Master Degree in Manufacturing 4.0 by Intelligent & Sustainable Technologies - META4.0)</p>
-       <p>Norwegian University of Science and Technology - Norway <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg" alt="Norway Flag" width="24"></p>
-       <p>Polytechnic University of Turin - Italy <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italy Flag" width="24"></p>
-       <p>École Centrale de Lyon - France <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="France Flag" width="24"></p>
+        <h1>Wiseman Siriro</h1>
+        <p class="tagline">
+            Mechanical Engineer | Materials Engineer | Manufacturing Engineer | Process Engineer | R&D Engineer | 
+            Sustainability Analyst | Data Analyst<br>
+            <em>European Erasmus Mundus Joint Master Degree – META4.0 (Manufacturing 4.0 by Intelligent & Sustainable Technologies)</em>
+        </p>
+        
+        <div class="education">
+            <p>Norwegian University of Science and Technology – Norway <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg" alt="Norway flag" width="24"></p>
+            <p>Polytechnic University of Turin – Italy <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italy flag" width="24"></p>
+            <p>École Centrale de Lyon – France <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="France flag" width="24"></p>
+        </div>
+
         <div class="social-links">
-            <!--💡UPDATE: Add your social media links and CV file-->
             <a href="https://www.linkedin.com/in/wiseman-siriro-40a834175/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:wisemansirirog@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+4796733697"><i class="fas fa-phone"></i></a>
-            <a href="https://wa.me/4796733697" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="[YOUR_GITHUB_URL]" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="[YOUR_YOUTUBE_URL]" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:wisemansirirog@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+4796733697" title="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/4796733697" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/wisemansg" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <!-- Uncomment if you have YouTube -->
+            <!-- <a href="YOUR_YOUTUBE_URL" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a> -->
             <a href="assets/WISEMAN SIRIRO - CV.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
         </div>
     </div>
-</header> 
+</header>
 
-<!-- NAVIGATION -->
 <nav>
     <div class="container">
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#mechanicalengineering">Mechanical Engineer</a></li>
-            <li><a href="#materialssengineering">Materials Engineer</a></li>
-            <li><a href="#processengineering">Process Engineer</a></li>
-            <li><a href="#manufacturingengineering">Manufacturing Engineer</a></li>
-            <li><a href="#sustainabilityanalyst">Sustainability Analyst</a></li>
-            <li><a href="#dataanalyst">Data Analyst</a></li>
-            <li><a href="#overallskills">Overall Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#overallskills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- ABOUT ME SECTION -->
 <section id="about" class="section">
     <div class="container">
         <h2>About Me</h2>
         <div class="about-content">
-            <!--💡UPDATE: Change the image to your own profile photo in assets/images/-->
-            <img src="assets/images/profile-placeholder.jpg" alt="Your Name" class="profile-photo">
+            <!-- Replace with your real photo -->
+            <img src="assets/images/profile.jpg" alt="Wiseman Siriro – Profile Photo" class="profile-photo">
             <div class="about-text">
-                <!--💡UPDATE: Write your own 'About Me' text here-->
-                <p> I'm a data professional with expertise in transforming complex datasets into actionable insights. My work focuses on creating interactive visualizations and data-driven stories that help organizations make informed decisions.</p>
-                <p>With experience in Power BI, SQL, and data modeling, I specialize in developing comprehensive reports that reveal hidden patterns and trends in data. This portfolio showcases my projects across various sectors.</p>
+                <p>I am an interdisciplinary engineer and data professional specializing in sustainable manufacturing, digital transformation, process optimization, and data-driven decision making. Holding an Erasmus Mundus META4.0 Master's degree from NTNU (Norway), Politecnico di Torino (Italy), and École Centrale de Lyon (France), I combine deep technical engineering knowledge with strong analytical and visualization skills (Power BI, Python, SQL, etc.).</p>
+                <p>My experience spans R&D, simulation (CFD, FEA), CAD/CAM, LCA/ESG analysis, and manufacturing systems across automotive, energy, and heavy industry sectors. Passionate about bridging engineering excellence with sustainability and intelligent technologies.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- MECHANICAL ENGINEER SECTION -->
-<section id="mechanicalengineering" class="section">
+<section id="projects" class="section">
     <div class="container">
-        <h2>My Projects</h2>
+        <h2>Selected Projects</h2>
         <div class="projects-grid">
 
-            <!--💡UPDATE: Replace this with your own project. Add as many as you like!-->
-            <!-- Project 1 -->
-             <div class="project-card">
-                <!--💡UPDATE: Add a preview image of your project to assets/images/ -->
-                <img src="Cold Spray Cover Page.jpeg" alt="Project One Preview">
-                <div class="project-card-content">
-                    <h3>High Temperature Processes</h3>
-                    <h3>(Cold Spray)</h3>
-                    <p>This project demonstrates the Cold Spray deposition of Stainless Steel 316L onto an Aluminium 3000 series cylinder, achieving particle adhesion through optimized impact velocity and temperature while preserving substrate properties. The study utilized Conic Nozzle Software for simulating gas and particle parameters and Excel for analytical calculations of critical and optimal velocities to ensure high deposition efficiency.</p>
-                    <div class="project-buttons">
-                        <!--💡UPDATE: Add link to your project's code/documentation on GitHub-->
-                        <a href="https://github.com/wisemansg/hightemperatureprocesses-" target="_blank" class="btn">View Summary</a>
-                        <!--💡UPDATE: Add link to your live dashboard (e.g., Power BI, Tableau Public)-->
-                        <a href="https://github.com/wisemansg/wisemansg.github.io/blob/main/COLD%20SPRAY%20LABORATORY%20SESSION_CLINTON_SAUD_RYAN_FEGOR_REALITY.pdf" target="_blank" class="btn btn-secondary">Full Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
+            <!-- Education / Degree Project -->
             <div class="project-card">
-                <img src="Transverse Cover Page.jpeg" alt="Project Two Preview">
+                <img src="assets/images/Transverse Cover Page.jpeg" alt="Sustainable Manufacturing Master Project">
                 <div class="project-card-content">
-                    <h3>Transverse Project in Manufacturing</h3>
-<h4>(Powder Characterization, Laser Cladding, Belt Finishing, Ball Burnishing, Surface Topography Characterization)</h4>
-                    <p>This project investigates advanced manufacturing processes ranging from powder characterization and material deposition to surface finishing and topography evaluation, with the goal of understanding how processing parameters influence material behavior, surface integrity, and final component performance. The work utilized tools and techniques such as laser cladding, cold spray, belt finishing, ball burnishing, SEM, confocal and focus variation microscopy, microhardness testing, and data analysis software to characterize and optimize engineering surfaces for industrial applications.</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/wisemansg/transversemanufacturingproject" target="_blank" class="btn">View Summary</a>
-                        <a href="https://github.com/wisemansg/wisemansg.github.io/blob/main/Project-Report_Transerve-Project-in-Manufacturing-meta4.0_1_.pdf" target="_blank" class="btn btn-secondary">Full Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="Hip Prosthesis Cover Page.jpeg" alt="Project Three Preview">
-                <div class="project-card-content">
-                    <h3>Design and Manufacture of a Hip Prosthesis</h3>
-                    <p>This project explores the design, material selection, and manufacturing considerations of a hip prosthesis with emphasis on the femoral head surface and its biomechanical performance. It was developed using titanium alloy characterization data, machining techniques, surface metrology tools, and microstructural analysis methods.</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/wisemansg/-hipprosthesis" target="_blank" class="btn">View Summary</a>
-                        <a href="https://github.com/wisemansg/wisemansg.github.io/blob/main/DESIGN_AND_MANUFACTUE_HIP_PROTHESIS.pdf" class="btn btn-secondary">Full Report</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <!-- Fix path! -->
-                <img src="assets/images/Transverse Cover Page.jpeg" alt="Transverse Project">
-                <div class="project-card-content">
-                    <h3>Master of Science in Sustainable Manufacturing</h3>
-                    <h4>Norwegian University of Science and Technology (NTNU)</h4>
-                    <p style="text-align: justify;">
-                        Master of Science in Sustainable Manufacturing, specializing in Digital Manufacturing.
-                    </p>
+                    <h3>M.Sc. in Sustainable Manufacturing (META4.0)</h3>
+                    <h4>NTNU Norway • Politecnico di Torino • École Centrale de Lyon</h4>
+                    <p>Specialization in Digital & Sustainable Manufacturing. Erasmus Mundus Joint Master Degree focusing on Industry 4.0 technologies, circular economy, and intelligent production systems.</p>
                     <div class="project-buttons">
                         <a href="https://github.com/wisemansg/transversemanufacturingproject" target="_blank" class="btn">Transcripts</a>
-                        <a href="https://github.com/wisemansg/transversemanufacturingproject" target="_blank" class="btn">Diploma</a>
-                        <a href="https://github.com/wisemansg/wisemansg.github.io/blob/main/Project-Report_Transerve-Project-in-Manufacturing-meta4.0_1_.pdf" target="_blank" class="btn btn-secondary">Full Report</a>
+                        <a href="assets/diploma-supplement.pdf" target="_blank" class="btn">Diploma Supplement</a>
+                        <!-- Add full report link if available -->
                     </div>
                 </div>
             </div>
 
-                     <!-- Project 6 -->
-               <div class="project-card">
-                <img src="Solidworks Cover Page.jpeg" alt="Project Four Preview">
+            <!-- SolidWorks -->
+            <div class="project-card">
+                <img src="assets/images/Solidworks Cover Page.jpeg" alt="SolidWorks Modeling Project">
                 <div class="project-card-content">
-                    <h3>SolidWorks</h3>
-                    <p>SolidWorks Modeling.</p>
+                    <h3>SolidWorks Parametric Modeling</h3>
+                    <p>Advanced 3D modeling, assemblies, and technical drawings using SolidWorks for mechanical design and product development.</p>
                     <div class="project-buttons">
-                        <a href="https://github.com/wisemansg/solidworks" target="_blank" class="btn">Documentation</a>
+                        <a href="https://github.com/wisemansg/solidworks" target="_blank" class="btn">View Repository</a>
                     </div>
                 </div>
             </div>
 
-             <!-- Project 10 --> 
-               <div class="project-card">
-                <img src="CFD Cover Page.jpeg" alt="Project Four Preview">
+            <!-- CFD Project -->
+            <div class="project-card">
+                <img src="assets/images/CFD Cover Page.jpeg" alt="CFD T-Junction Analysis">
                 <div class="project-card-content">
-                    <h3>Computational Fluid Dynamics (CFD)</h3>
-                    <p>Computational Fluid Dynamics (CFD).</p>
+                    <h3>CFD Analysis – Hot/Cold Water Mixing in T-Junction</h3>
+                    <p>Thermal mixing simulation using SolidWorks Flow Simulation to analyze flow behavior, temperature distribution, and turbulence in piping systems.</p>
                     <div class="project-buttons">
                         <a href="https://github.com/wisemansg/cfd" target="_blank" class="btn">Documentation</a>
-                        <a href="https://github.com/wisemansg/cfd/blob/main/CFD%20Analysis%20of%20Hot%E2%80%93Cold%20Water%20Mixing%20in%20a%20T-Junction%20Duct%20Using%20SolidWorks%20Flow%20Simulation.pdf"_blank" class="btn">Full Report</a>
+                        <a href="https://github.com/wisemansg/cfd/blob/main/CFD%20Analysis%20of%20Hot%E2%80%93Cold%20Water%20Mixing%20in%20a%20T-Junction%20Duct%20Using%20SolidWorks%20Flow%20Simulation.pdf" target="_blank" class="btn btn-secondary">Full Report</a>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Add more project cards here as needed -->
+
         </div>
     </div>
 </section>
 
-
-<!-- OVERALL SKILLS SECTION -->
-    
- <section id="overallskills" class="section">
+<section id="overallskills" class="section">
     <div class="container">
         <h2>Overall Skillset</h2>
-
         <table class="word-table">
-            <tr>
-                <td class="col-heading">Project & Enterprise Systems</td>
-                <td>ERP (SAP, Oracle, IFS), STELLA, Trello, Asana, Confluence, Jira, Microsoft Project, PLM (Teamcenter, Windchill, ENOVIA), Process Documentation, Process Improvement, Workshop Facilitation, Project Coordination.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Data Analysis & Statistics</td>
-                <td>Power BI, Tableau, Spotfire, Grafana, Google Analytics, Adobe Analytics, R, MATLAB, Jupyter, Advanced Excel (VBA, Power Query), Data Science, Machine Learning, AI, Forecasting, Data Visualization, KPI Tracking, Reporting.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Programming Languages</td>
-                <td>SQL, JavaScript, C#, Python (Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, TensorFlow, PyTorch), R, C++, Visual Basic, Visual Studio.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">IT & Office Tools</td>
-                <td>Microsoft 365, Excel, PowerPoint, Word, Outlook, Teams, Visio, OneNote, Google Workspace, Adobe, Miro, Report Writing, Process Mapping.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Engineering & Simulation</td>
-                <td>ANSYS, ABAQUS, NASTRAN, Simulink, OpenFOAM, COMSOL, Fluent, STAR-CCM+, ASPEN Plus, gPROMS, HYSYS, Thermo-Calc, SimaPro, GaBi, OpenLCA, LabVIEW, ImageJ, HVAC Simulation.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">CAD & CAM Tools</td>
-                <td>AutoCAD, SolidWorks, CATIA, CREO, Siemens NX, Inventor, Fusion 360, Rhino 3D, Onshape.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Quality & Compliance</td>
-                <td>GMP, GDP, QA, QC, Root Cause Analysis, SPC, Six Sigma, Lean, 5S, Kaizen, VSM, Lean Manufacturing, Risk Management.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Manufacturing Systems</td>
-                <td>SAP QM, SAP EWM, Oracle WMS, TrackWise, MES, Dynamics, MSA, Manufacturing Improvement.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Automation & Control</td>
-                <td>SCADA, n8n, Zapier, CRM, PLC (Siemens, Allen-Bradley), PID Optimization.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">IT/OT & Virtualization</td>
-                <td>VMware, Azure, AWS, Google Cloud, PROFINET, Modbus, OPC UA, IoT, GitHub, Digital Industries, AR/VR, BMS.</td>
-            </tr>
-
-            <tr>
-                <td class="col-heading">Soft Skills</td>
-                <td>Communication, Collaboration, Problem Solving, Decision-Making, Stakeholder Engagement, Attention to Detail, Resilience.</td>
-            </tr>
+            <tr><td class="col-heading">Project & Enterprise Systems</td><td>ERP (SAP, Oracle, IFS), STELLA, Trello, Asana, Confluence, Jira, Microsoft Project, PLM (Teamcenter, Windchill, ENOVIA), Process Documentation, Workshop Facilitation.</td></tr>
+            <tr><td class="col-heading">Data Analysis & Statistics</td><td>Power BI, Tableau, Spotfire, Grafana, Advanced Excel (VBA, Power Query), Python (Pandas, NumPy, Matplotlib, Seaborn), R, SQL, Data Visualization, KPI Dashboards.</td></tr>
+            <tr><td class="col-heading">Programming Languages</td><td>Python, SQL, JavaScript, C#, R, MATLAB, Visual Basic.</td></tr>
+            <tr><td class="col-heading">Engineering & Simulation</td><td>ANSYS, COMSOL, OpenFOAM, SolidWorks Flow Simulation, ASPEN, HYSYS, SimaPro, GaBi, OpenLCA.</td></tr>
+            <tr><td class="col-heading">CAD & CAM Tools</td><td>SolidWorks, CATIA, Siemens NX, AutoCAD, Fusion 360, CREO.</td></tr>
+            <tr><td class="col-heading">Sustainability & Quality</td><td>LCA, ESG Analysis, Carbon Footprint, Lean, Six Sigma, GMP, Root Cause Analysis, VSM.</td></tr>
+            <tr><td class="col-heading">Soft Skills</td><td>Cross-functional Collaboration, Project Management, Multilingual Communication, Problem Solving.</td></tr>
         </table>
     </div>
 </section>
 
-<style>
-.word-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 12px; /* adds blank line between rows */
-    font-size: 15px;
-}
-
-.word-table td {
-    border: 1px solid #000;
-    padding: 8px 10px;
-    vertical-align: top;
-}
-
-.word-table .col-heading {
-    font-weight: 700;
-    white-space: nowrap;       /* prevents wrapping */
-    min-width: 300px;          /* ensures long headings fit */
-    width: 30%;                /* gives proper horizontal space */
-}
-</style>
-   
-
-<!-- CONTACT FORM SECTION -->
 <section id="contact" class="section">
     <div class="container">
-        <h2>Send me a message</h2>
-        
-        <!--💡UPDATE: Go to formsubmit.co and replace the email with your own-->
+        <h2>Get in Touch</h2>
         <form action="https://formsubmit.co/wisemansirirog@gmail.com" method="POST" class="contact-form">
-            <p> Interested in collaborating or have questions about my work? I'd love to hear from you!</p>
-
-            <!-- Form Fields -->
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" placeholder="Your message" required></textarea>
-            </div>
-            
-            <!-- Submit Button -->
+            <p>Interested in collaboration, consulting, or just want to discuss sustainable manufacturing or data projects? Feel free to reach out!</p>
+            <div class="form-group"><label for="name">Name</label><input type="text" name="name" id="name" placeholder="Your name" required></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" name="email" id="email" placeholder="Your email" required></div>
+            <div class="form-group"><label for="subject">Subject</label><input type="text" name="subject" id="subject" placeholder="Subject" required></div>
+            <div class="form-group"><label for="message">Message</label><textarea name="message" id="message" rows="6" placeholder="Your message..." required></textarea></div>
             <button type="submit" class="btn">Send Message</button>
-
         </form>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="container">
-        <!--💡UPDATE: Change the year and your name-->
-        <p>&copy; 2026 Wiseman Siriro. All rights reserved.</p>
+        <p>© 2026 Wiseman Siriro. All rights reserved.</p>
     </div>
 </footer>
 
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
